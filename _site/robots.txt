@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://holaimlopez.github.io/mlopezrework/sitemap.xml

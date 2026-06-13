@@ -3,10 +3,10 @@ tagline: "Bronx~NYC Based Portrait Photographer & Political Creative"
 description: >-
   Professional portrait and headshot photographer in The Bronx, New York City.
   Specializing in corporate headshots, editorial, artistic portraits, and creative brand partnerships.
-# Served from the GitHub project page: https://holaimlopez.github.io/mlopezrework/
+# Served from the GitHub project page: https://holaimlopez.github.io/mlopezphotorework/
 # When you move to the custom domain mlopezphoto.com, set baseurl to "" and add a CNAME file.
 url: "https://holaimlopez.github.io"
-baseurl: "/mlopezrework"
+baseurl: "/mlopezphotorework"
 author: "Marcelo Lopez Lopez, Logistics Consulting Services"
 lang: en
 

@@ -1,0 +1,12 @@
+# Jekyll build output (GitHub Pages regenerates this)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local Ruby/Bundler environment
+vendor/
+.bundle/
+
+# OS cruft
+.DS_Store
+**/.DS_Store
