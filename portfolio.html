@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Photography Portfolio | Marcelo Lopez Lopez"
+description: "Explore the master photography portfolio of Marcelo Lopez Lopez. A curated showcase of Corporate Headshots, Fine Art Portraits, Editorial Politics, and Brand Activations in New York City."
+permalink: /portfolio/
+---
+
+<section class="section wrap wrap-tight" style="padding-bottom:2rem;">
+  <p class="eyebrow reveal">Selected Work</p>
+  <h1 class="reveal mt-3" style="font-size:clamp(2.4rem,6vw,4.2rem);">Portfolio</h1>
+  <p class="lede reveal mt-4">
+    A curated index across four disciplines &mdash; corporate headshots, fine-art portraits,
+    editorial &amp; politics, and brand activations. Each frame is made on location across New York City.
+  </p>
+</section>
+
+<section class="wrap section" style="padding-top:0;">
+  <!-- Master grid. To swap a photo: drop a hyphenated, lowercase file in /images/portfolio/,
+       update the src + the unique alt text, commit to main. -->
+  <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 gap-5">
+
+    {% assign slots = "
+      01Diya_Headshot_2026.jpg|placeholder-headshots.jpg|professional-studio-headshot-diya-2026-bronx|Professional Corporate Headshot|/portfolio/headshots/
+      02MLL001.jpg|placeholder-editorial.jpg|marcelo-lopez-mll001-corporate-executive-session|Executive Portraiture|/portfolio/headshots/
+      03marionacting.jpg|placeholder-portraits.jpg|marion-acting-headshot-portfolio-artistic-bronx|Artistic Portrait & Actor Headshots|/portfolio/portraits/
+      04MLL0393.jpg|placeholder-brand.JPG|mll0393-editorial-street-culture-portrait|Editorial Portraiture|/portfolio/editorial/
+    " | strip | split: "
+    " %}
+
+    {% for slot in slots %}
+      {% assign p = slot | strip | split: "|" %}
+      <a href="{{ p[4] | relative_url }}" class="portfolio-item group block reveal">
+        <div class="card-media" style="aspect-ratio:4/5;border-radius:6px;">
+          <img src="{{ '/images/portfolio/' | append: p[0] | relative_url }}"
+               alt="{{ p[2] }}" loading="lazy"
+               onerror="this.onerror=null;this.src='{{ '/images/portfolio/' | append: p[1] | relative_url }}';">
+          <div class="card-label">
+            <p class="font-display" style="font-size:1.15rem;">{{ p[3] }}</p>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Genre gateway -->
+<section class="section" style="background:var(--paper-deep);">
+  <div class="wrap">
+    <p class="eyebrow reveal">By discipline</p>
+    <h2 class="reveal mt-3 mb-8" style="font-size:clamp(1.7rem,4vw,2.6rem);">Explore each genre.</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      {% include specialty-card.html index="01" title="Corporate Headshots" url="/portfolio/headshots/" alt="corporate-headshots-genre-preview" %}
+      {% include specialty-card.html index="02" title="Artistic Portraits" url="/portfolio/portraits/" alt="artistic-portraits-genre-preview" %}
+      {% include specialty-card.html index="03" title="Editorial & Culture" url="/portfolio/editorial/" alt="editorial-culture-genre-preview" %}
+      {% include specialty-card.html index="04" title="Brand & Creative" url="/portfolio/brand-creative/" alt="brand-creative-genre-preview" %}
+    </div>
+  </div>
+</section>

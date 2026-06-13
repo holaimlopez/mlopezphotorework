@@ -1,0 +1,16 @@
+{% comment %} params: index, title, url, alt, img(optional) {% endcomment %}
+<a href="{{ include.url | relative_url }}" class="group block reveal">
+  <div class="card-media">
+    {% if include.img %}
+      <img src="{{ include.img | relative_url }}" alt="{{ include.alt }}" loading="lazy">
+    {% else %}
+      <div class="frame" role="img" aria-label="{{ include.alt }}">
+        <span class="mono">{{ include.title }}</span>
+      </div>
+    {% endif %}
+    <div class="card-label">
+      <span class="card-index">{{ include.index }}</span>
+      <p class="font-display mt-1" style="font-size:1.15rem;">{{ include.title }}</p>
+    </div>
+  </div>
+</a>

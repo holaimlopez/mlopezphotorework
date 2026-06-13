@@ -1,0 +1,52 @@
+{% assign biz = site.business %}
+<footer class="site-footer">
+  <div class="wrap section" style="padding-top:4rem;padding-bottom:2.5rem;">
+    <div class="grid gap-10 md:grid-cols-3">
+
+      <div>
+        <img src="{{ '/images/logos/marcelolopezlogo.webp' | relative_url }}"
+             alt="Marcelo Lopez Photography logo" style="height:2.5rem;width:auto;display:block;filter:invert(1);">
+
+        <p class="mt-3 text-sm" style="max-width:22rem;">
+          Portrait, headshot, editorial &amp; brand photography rooted in {{ biz.city }}, {{ biz.region }}.
+          <em style="color:rgba(246,243,236,.85);font-style:italic;">Available for travel.</em>
+        </p>
+      </div>
+
+      <div>
+        <p class="eyebrow" style="color:var(--gold);">Explore</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="{{ '/portfolio/' | relative_url }}">Portfolio</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/reviews/' | relative_url }}">Reviews</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/contact/booking/' | relative_url }}">Book a session</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="eyebrow" style="color:var(--gold);">Connect</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="mailto:{{ biz.email }}?subject=Website%20Inquiry">{{ biz.email }}</a></li>
+          <li><a href="tel:{{ biz.phone_e164 }}">{{ biz.phone_display }}</a></li>
+          <li><a href="{{ biz.whatsapp }}" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          <li><a href="{{ biz.instagram }}" target="_blank" rel="noopener noreferrer">Instagram &mdash; @LOPEZPHOTO</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="rule my-8" style="background:rgba(246,243,236,.18);">
+
+    <p class="flex items-center gap-4 text-xs mb-3">
+      <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a>
+      <a href="{{ '/terms-of-service/' | relative_url }}" class="footer-link">Terms of Service</a>
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
+      <p>Copyright &copy; <span data-year>2026</span> Logistics Consulting Services</p>
+      <p>
+        <a href="{{ biz.links_hub }}" target="_blank" rel="noopener noreferrer" class="footer-link">Marcelo Lopez</a>'s Links
+      </p>
+    </div>
+  </div>
+</footer>

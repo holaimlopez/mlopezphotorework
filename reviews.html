@@ -1,0 +1,59 @@
+---
+layout: default
+title: "Client Testimonials & Reviews | Marcelo Lopez Photography"
+description: "Read real client stories and reviews about Marcelo Lopez Photography. Discover how Bronx and NYC professionals, artists, and families view their experience."
+permalink: /reviews/
+---
+
+<section class="section wrap wrap-tight" style="padding-bottom:2rem;">
+  <p class="eyebrow reveal">Reviewed on Google</p>
+  <h1 class="reveal mt-3" style="font-size:clamp(2.4rem,6vw,4.2rem);">Reviews</h1>
+  <p class="lede reveal mt-4">
+    Bronx and NYC professionals, artists, and community leaders on what it's like to be
+    photographed with intention.
+  </p>
+
+  <div class="reveal mt-5 flex flex-wrap items-center gap-5">
+    <span class="reviews-summary" data-reviews-summary>
+      <span class="big">5.0</span>
+      <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span>on Google</span>
+    </span>
+    {% if site.business.google_reviews_url %}
+    <a href="{{ site.business.google_reviews_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 14.6 8.6 21.5 9 16 13.3 17.8 20 12 16.2 6.2 20 8 13.3 2.5 9l6.9-.4L12 2z"/></svg>
+      Leave a review on Google
+    </a>
+    {% endif %}
+  </div>
+</section>
+
+<section class="wrap section" style="padding-top:0;">
+  <!-- Renders the curated wall server-side; reviews.js replaces it with live Google
+       reviews (Featurable JSON API) when the widget id is set and the fetch succeeds. -->
+  <div class="masonry" id="reviews-list"
+       data-featurable-widget="{{ site.reviews.featurable_widget_id }}">
+    {% for r in site.data.reviews %}
+      <figure class="review-card reveal">
+        <div class="stars" aria-label="{{ r.rating }} out of 5 stars">
+          {% for i in (1..r.rating) %}&#9733;{% endfor %}{% assign blanks = 5 | minus: r.rating %}{% if blanks > 0 %}{% for i in (1..blanks) %}<span style="color:var(--line);">&#9733;</span>{% endfor %}{% endif %}
+        </div>
+        <blockquote class="review-quote mt-3">&ldquo;{{ r.quote }}&rdquo;</blockquote>
+        <figcaption class="mt-4 text-sm" style="color:var(--ink-soft);">
+          <strong style="color:var(--ink);">{{ r.name }}</strong>{% if r.role %} &middot; {{ r.role }}{% endif %}
+        </figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section" style="background:var(--ink);color:var(--paper);">
+  <div class="wrap text-center">
+    <h2 class="reveal" style="color:var(--paper);font-size:clamp(1.8rem,5vw,3rem);max-width:24ch;margin-inline:auto;">
+      Ready to have your own story captured?
+    </h2>
+    <div class="mt-7 reveal">
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-primary" style="background:var(--paper);color:var(--ink);">Book your session now <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>

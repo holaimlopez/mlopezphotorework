@@ -1,0 +1,20 @@
+# Client testimonials. Add an item with name, quote, rating (1-5) and optional role.
+- name: "Sarah K."
+  role: "Bronx Tech Entrepreneur"
+  quote: "Marcelo completely transformed our team's look. He came directly to our South Bronx office, set up professional studio lighting in minutes, and made everyone feel extremely comfortable. The corporate headshots are absolutely stellar."
+  rating: 5
+
+- name: "Marcus L."
+  role: "Fine Artist & Sculptor"
+  quote: "For my artist portfolio grant applications to the Bronx Council on the Arts, I needed high-fidelity documentation and portrait work. Marcelo did an incredible job telling the story of my practice within my studio."
+  rating: 5
+
+- name: "Daniela R."
+  role: "Actor & Casting Client"
+  quote: "My new casting headshots finally look like me on my best day. Marcelo directs expression so naturally that you forget the camera is even there. I've already booked more auditions because of these frames."
+  rating: 5
+
+- name: "Councilmember's Office"
+  role: "Editorial / Campaign"
+  quote: "Marcelo documented a full day of community events with a photojournalist's eye. The images were print-ready, emotionally honest, and exactly the story we needed to tell about the neighborhood."
+  rating: 5

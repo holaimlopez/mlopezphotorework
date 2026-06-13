@@ -1,0 +1,46 @@
+title: "Marcelo Lopez Lopez"
+tagline: "Bronx~NYC Based Portrait Photographer & Political Creative"
+description: >-
+  Professional portrait and headshot photographer in The Bronx, New York City.
+  Specializing in corporate headshots, editorial, artistic portraits, and creative brand partnerships.
+# Served from the GitHub project page: https://holaimlopez.github.io/mlopezrework/
+# When you move to the custom domain mlopezphoto.com, set baseurl to "" and add a CNAME file.
+url: "https://holaimlopez.github.io"
+baseurl: "/mlopezrework"
+author: "Marcelo Lopez Lopez, Logistics Consulting Services"
+lang: en
+
+# Business / contact details surfaced across the site
+business:
+  name: "Marcelo Lopez Photography"
+  legal_name: "Marcelo Lopez Photography"
+  email: "lopezlmarcelo@gmail.com"
+  phone_display: "+1 (347) 912-7485"
+  phone_e164: "+13479127485"
+  whatsapp: "https://wa.me/13479127485?text=I'm%20interested%20in%20a%20photography%20project"
+  instagram: "https://www.instagram.com/LOPEZPHOTO/"
+  links_hub: "https://mlopez.nyc"
+  city: "The Bronx"
+  region: "New York City"
+  google_place_id: "ChIJlQxhCCPzwokRbDuejO1hvJE"
+  google_reviews_url: "https://search.google.com/local/writereview?placeid=ChIJlQxhCCPzwokRbDuejO1hvJE"
+
+# Live Google reviews via the Featurable JSON API.
+# The reviews page fetches this widget and renders the reviews in the site's own card design.
+# Leave the id blank to fall back to the curated reviews in _data/reviews.yml.
+reviews:
+  featurable_widget_id: "b243bcef-7b44-4f2b-aa51-cc88d9c1ee41"
+
+# Jekyll build settings
+markdown: kramdown
+permalink: pretty
+encoding: utf-8
+# This site ships its own layouts/styles — no gem theme.
+theme: null
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

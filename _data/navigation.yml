@@ -1,0 +1,24 @@
+# Primary navigation — edit here to update the menu on every page globally.
+primary:
+  - title: "About"
+    url: /about/
+  - title: "Portfolio"
+    url: /portfolio/
+    children:
+      - title: "Professional & Corporate Headshots"
+        url: /portfolio/headshots/
+      - title: "Artistic Portraits"
+        url: /portfolio/portraits/
+      - title: "Editorial & Culture"
+        url: /portfolio/editorial/
+      - title: "Brand & Creative Projects"
+        url: /portfolio/brand-creative/
+  - title: "Reviews"
+    url: /reviews/
+  - title: "Contact"
+    url: /contact/
+    children:
+      - title: "Booking"
+        url: /contact/booking/
+  - title: "Blog"
+    url: /blog/

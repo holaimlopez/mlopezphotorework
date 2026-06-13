@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="section wrap wrap-tight" style="padding-bottom:2.5rem;">
+    {% if page.eyebrow %}<p class="eyebrow reveal">{{ page.eyebrow }}</p>{% endif %}
+    <h1 class="reveal" style="font-size:clamp(2.4rem,6vw,4.2rem);margin-top:0.6rem;">{{ page.heading | default: page.title }}</h1>
+    {% if page.lede %}<p class="lede reveal mt-4">{{ page.lede }}</p>{% endif %}
+  </header>
+  <hr class="rule">
+  <div class="section">
+    {{ content }}
+  </div>
+</article>

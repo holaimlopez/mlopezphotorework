@@ -1,0 +1,43 @@
+{% assign dark = page.theme == "dark" %}
+<section class="hero" style="min-height:70vh;">
+  <div class="hero-media"><div class="frame" aria-hidden="true" style="height:100%;{% if dark %}filter:contrast(1.1);{% endif %}"></div></div>
+  <div class="hero-inner wrap" role="img" aria-label="{{ page.hero_alt }}">
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1 class="mt-3" style="font-size:clamp(2.4rem,7vw,5.5rem);max-width:16ch;">{{ page.headline }}</h1>
+    <p class="hero-sub mt-6">{{ page.subhead }}</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="{{ '/contact/booking/' | relative_url }}" class="btn btn-primary" style="background:var(--paper);color:var(--ink);">{{ page.cta | default: "Book a session" }} <span class="arrow">&rarr;</span></a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-ghost" style="border-color:rgba(246,243,236,.5);color:var(--paper);">Ask a question</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap wrap-tight">
+    <p class="lede reveal prose">{{ page.copy }}</p>
+  </div>
+</section>
+
+{% if page.bullets %}
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="grid sm:grid-cols-3 gap-5">
+      {% for b in page.bullets %}
+        <div class="reveal p-6 bg-white" style="border:1px solid var(--line);border-radius:6px;">
+          <p class="font-display" style="font-size:1.2rem;">{{ b.title }}</p>
+          <p class="text-sm mt-2" style="color:var(--ink-soft);">{{ b.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" style="background:var(--ink);color:var(--paper);">
+  <div class="wrap text-center">
+    <h2 class="reveal" style="color:var(--paper);font-size:clamp(1.8rem,5vw,3rem);max-width:22ch;margin-inline:auto;">{{ page.closing | default: "Let's get you on the calendar." }}</h2>
+    <div class="mt-7 reveal">
+      <a href="{{ '/contact/booking/' | relative_url }}" class="btn btn-primary" style="background:var(--paper);color:var(--ink);">{{ page.cta | default: "Book a session" }} <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
